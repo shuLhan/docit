@@ -1,0 +1,67 @@
+body {
+	font-family		: Dejavu-Sans, Verdana, Sans
+	background-color	: white;
+	color			: black;
+}
+
+h1, h2 {
+	background-color	: black;
+	color			: white;
+	border-bottom		: 2px solid;
+	border-color		: gray;
+	padding			: 4px 0px 4px 16px;
+}
+
+h2 {
+	font-size		: 16px;
+}
+
+h3 {
+	background-color	: gray;
+	color			: white;
+	border-bottom		: 2px solid;
+	border-color		: silver;
+	padding			: 4px 0px 4px 16px;
+}
+
+h2 {
+	margin-top	: 2em;
+}
+
+table {
+	border-collapse	: collapse;
+}
+
+th,td {
+	vertical-align	: top;
+	padding		: 4px;
+	border		: 1px solid;
+}
+
+th {
+	background-color	: silver;
+	text-align		: right;
+	border-color		: gray;
+}
+
+td {
+	border-color	: silver;
+	text-align	: left;
+}
+
+a {
+	text-decoration	: none;
+}
+
+pre {
+	background-color	: silver;
+	font-family		: monospace;
+	border			: 1px solid;
+	border-color		: gray;
+	padding			: 4px 4px 4px 16px;
+}
+
+.code {
+	white-space	: pre;
+	font-family	: monospace;
+}
