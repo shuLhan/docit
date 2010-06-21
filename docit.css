@@ -1,7 +1,11 @@
 body {
-	font-family		: Dejavu-Sans, Verdana, Sans
+	font-family		: "Bitstream Vera Sans", "Dejavu Sans", Verdana, sans;
 	background-color	: white;
 	color			: black;
+	width			: 760px;
+	margin			: 10px auto 10px auto;
+	padding			: 8px;
+	border			: solid black 1px;
 }
 
 h1, h2 {
@@ -29,24 +33,23 @@ h2 {
 }
 
 table {
+	margin		: 8px 0px 8px 0px;
 	border-collapse	: collapse;
-}
-
-th,td {
-	vertical-align	: top;
-	padding		: 4px;
-	border		: 1px solid;
 }
 
 th {
 	background-color	: silver;
-	text-align		: right;
-	border-color		: gray;
+	text-align		: left;
+	vertical-align		: text-top;
+	padding			: 4px;
+	border			: 1px solid gray;
+	width			: auto;
 }
 
 td {
-	border-color	: silver;
-	text-align	: left;
+	padding		: 8px;
+	vertical-align	: top;
+	border		: 1px solid gray;
 }
 
 a {

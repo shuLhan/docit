@@ -72,7 +72,7 @@ static int parsing_get_tag(char **_cmnt, int *lines,
 
 			type = Content::GET_TYPE(str);
 
-			*cmnt = c;
+			*cmnt = (char) c;
 
 			while (*cmnt && isspace(*cmnt)) {
 				if (*cmnt == '\n') {
@@ -640,7 +640,7 @@ int Docit::grok_src(const int get_code_snippet)
 	if (s != 0)
 		return s;
 
-	s = f.get_size();
+	s = (int) f.get_size();
 	if (s < 0)
 		return s;
 
@@ -695,7 +695,7 @@ int Docit::grok_src(const int get_code_snippet)
 		}
 
 		if (end) {
-			*c = end;
+			*c = (char) end;
 		}
 
 		if (get_code_snippet && cntn 
