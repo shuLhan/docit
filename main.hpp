@@ -1,6 +1,8 @@
 #ifndef _DOCIT_MAIN_HPP
 #define	_DOCIT_MAIN_HPP	1
 
+#include "Docit.css.hpp"
+
 extern int DOCIT_DEBUG;
 
 #define	DBG_LVL_IS_1	(DOCIT_DEBUG == 1)

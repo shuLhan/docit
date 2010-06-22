@@ -1,5 +1,6 @@
 SRC_D		=.
 BLD_D		=$(SRC_D)/build
+BIN_D		=~/bin
 LIBVOS_D	=$(SRC_D)/libvos
 
 include $(LIBVOS_D)/Makefile
@@ -19,23 +20,25 @@ TARGET_OBJS	=	$(BLD_D)/main.oo		\
 			$(LIBVOS_BLD_D)/libvos.oo
 
 
-.PHONY: all debug clean
+.PHONY: all debug install clean distclean
 
 all: libvos-all
 
 debug: libvos-debug
 
-$(TARGET): $(TARGET_OBJS)
-	@$(do_build)
-
-$(BLD_D):
-	@echo "[M] $@"
-	@mkdir -p $@
-
-$(BLD_D)/%.oo: $(SRC_D)/%.cpp $(SRC_D)/%.hpp
-	@$(do_compile)
+install:
+	@$(call do_install,$(TARGET),$(BIN_D))
 
 clean:
 	@$(call do_rmdir,$(BLD_D))
 
 distclean: clean libvos-clean
+
+$(TARGET): $(TARGET_OBJS)
+	@$(do_build)
+
+$(BLD_D):
+	@$(call do_mkdir,$@)
+
+$(BLD_D)/%.oo: $(SRC_D)/%.cpp $(SRC_D)/%.hpp
+	@$(do_compile)

@@ -184,7 +184,6 @@ static int docit_to_html()
 	int		s	= 0;
 	Buffer		fname;
 	Docit2HTML	html;
-	File		file;
 	File		fcss;
 	Docit		*p	= doc_grp;
 
@@ -246,18 +245,12 @@ static int docit_to_html()
 	fname.reset();
 	fname.concat(doc_dir._v, "/", DOCIT_STYLE_CSS, NULL);
 
-	s = file.open_ro(DOCIT_STYLE_CSS);
-	if (s)
-		return s;
 	s = fcss.open_wo(fname._v);
-	if (s)
+	if (s) {
 		return s;
+	}
 
-	while (file.read())
-		fcss.write(&file);
-
-	fcss.close();
-	file.close();
+	fcss.write_raw(CSS);
 
 	return 0;
 } 

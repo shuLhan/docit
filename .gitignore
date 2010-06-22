@@ -1,3 +1,2 @@
 build
-lib
-valgrind.out
+libvos
